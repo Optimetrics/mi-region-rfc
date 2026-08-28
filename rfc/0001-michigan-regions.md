@@ -37,7 +37,8 @@ midwest
 ├── mi
 │   ├── mi-west
 │   │   ├── grr
-│   │   └── mkg (example)
+│   │   ├── mkg (example)
+│   │   └── azo
 │   ├── mi-central
 │   │   ├── thumb
 │   │   └── midstate
@@ -55,6 +56,8 @@ midwest
 Michigan subregion names use a parent-first `mi-` prefix so they remain recognizable, group together, and avoid collisions with similarly named regions elsewhere. In this draft, `mi-north` refers to the northern Lower Peninsula and `mi-upper` refers to the Upper Peninsula.
 
 The example local branches—`mkg` for the Muskegon area, `det` for the Detroit area, `tvc` for the Traverse City area, and `mqt` for the Marquette area—illustrate how city or metro scopes could nest beneath Michigan subregions. They do not establish final local definitions or hard geographic boundaries.
+
+The `azo` branch is adopted by participating Kalamazoo-area repeater operators rather than listed only as an example.
 
 ## How repeater tags and channel scopes work
 
@@ -128,6 +131,12 @@ The `grr` region is the local coordination domain centered on the Grand Rapids m
 Its edges are intentionally flexible. Participation should follow useful local RF propagation, coverage, and community relationships rather than a fixed radius or a hard list of cities, townships, or counties. A nearby community may reasonably use `grr` when it shares local traffic and practical connectivity with the Grand Rapids area.
 
 The region is intended for traffic useful within the greater Grand Rapids area that does not need the broader West Michigan scope of `mi-west`. It does not grant Grand Rapids or any participant ownership of the surrounding area or authority over another community's traffic.
+
+### `azo`
+
+The `azo` region is the local coordination domain for the Kalamazoo area. Participating Kalamazoo repeaters carry the full ancestry `midwest`, `mi`, `mi-west`, and `azo`, with each region configured separately.
+
+Like the other local regions in this RFC, `azo` has intentionally flexible edges. Its practical scope should follow useful local RF coverage and community relationships rather than a fixed municipal or county boundary.
 
 These descriptions communicate intended scope; they do not establish political or rigid RF borders.
 
