@@ -393,12 +393,39 @@ network has rebuilt unscoped flooding with extra steps.
 5. **Announce bridges.** A bridge nobody knows about is how cross-region
    traffic becomes a mystery.
 
-Example for a Grand Rapids-side site on the Ionia line that serves both:
+Example for a Grand Rapids-side site on the Ionia line that serves both.
+Commands depend on repeater firmware as in step 1; check with `ver`.
+
+Repeater firmware 1.16 or later:
 
 ```
 region def midwest mi mi-west grr
+region def midwest mi mi-central
+region default mi-west
+region save
+```
+
+Repeater firmware 1.15 (no `region def`):
+
+```
+region put midwest
+region put mi midwest
+region put mi-west mi
+region put grr mi-west
 region put mi-central mi
 region default mi-west
+region save
+```
+
+Repeater firmware 1.10 through 1.14 (no `region default`; the site forwards
+both regions' scoped traffic correctly, but its own adverts stay unscoped):
+
+```
+region put midwest
+region put mi midwest
+region put mi-west mi
+region put grr mi-west
+region put mi-central mi
 region save
 ```
 
