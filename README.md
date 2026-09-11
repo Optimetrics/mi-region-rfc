@@ -7,6 +7,7 @@ The draft treats regions as RF propagation and community domains, not political 
 ## RFCs
 
 - [RFC-001: Michigan MeshCore Regions](rfc/0001-michigan-regions.md) — Draft
+- [RFC-001 Addendum A: Scoping Policy and Reference County Assignments](rfc/0001-addendum-a-scoping-and-county-reference.md) — Draft
 
 ## Current draft hierarchy
 
